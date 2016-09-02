@@ -4,32 +4,31 @@
  */
 
 // Opgaven her består i at lave et program, som indlæser 3 tal fra konsollen, og udskriver det mindste af de 3 tal.
+// Denne opgave er den samme som 01.3.1, denne her er dog bare lidt mere optimeret
 
 // Vi skal bruge Scanner-klassen for at tage imod input fra brugeren
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        // Vi starter med at definere en Scanner til at tage imod input fra brugeren:
         Scanner input = new Scanner(System.in);
 
-        // Vi definerer så 3 variabler til at holde input fra brugeren, og beder om input:
-        double a = input.nextDouble();
-        double b = input.nextDouble();
-        double c = input.nextDouble();
+        // I stedet for 3 variabler, vil vi nu kun have 1 variable, til at holde alle 3 værdier.
+        // Dette kaldes en array, og definerer således:
+        double[] tal = new double[3]; // 3 angiver at vi vil holde 3 værdier
 
-        // Vi definerer en minimumsvariable til at holde det mindste tal.
-        // Vi sltter variablen til at være det højeste tal en double kan være, for at være sikker på,
-        // at a, b og/eller c i hvert fald må være mindre end det.
+        // En for loop vil nu indsamle alle værdierne vores array:
+        for (int i = 0; i < tal.length; i++) { // tal.length er antallet af værdier i vores array
+            tal[i] = input.nextDouble();
+        }
+
         double min = Double.MAX_VALUE;
 
-        // Vi tjekker så alle værdierne mod variablen min.
-        if (a < min)
-            min = a; // Hvis a er mindre end min, så sættes min til værdien a osv.
-        if (b < min)
-            min = b;
-        if (c < min)
-            min = c;
+        // Vi kan nu tjekke alle værdierne mod hinanden:
+        for (int i = 0; i < tal.length; i++) {
+            if (tal[i] < min)
+                min = tal[i];
+        }
 
         // Lad os så se hvad det mindste tal er
         System.out.println(min);
