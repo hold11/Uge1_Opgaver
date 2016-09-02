@@ -1,3 +1,5 @@
+![Build](https://raw.githubusercontent.com/travis-ci/travis-api/515ffb8a8a881f18c7e27bf134da81a8de54945f/public/images/result/passing.png)
+
 # Uge 1 Opgaver
 
 I dette repository er nogle opgaver fra den første uge (Lektionen fra fredag d. 2. september 2016 for Hold A).
