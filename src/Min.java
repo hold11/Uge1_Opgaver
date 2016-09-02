@@ -7,6 +7,6 @@
 
 public class Min {
     public static double min (double a, double b, double c) {
-        return (((a < b) ? a : b) < c) ?((a < b) ? a : b) : c;
+        return (((a < b) ? a : b) < c) ? ((a < b) ? a : b) : c;
     }
 }
